@@ -1,0 +1,117 @@
+/* Table of Contents
+==================================================
+    #Base 1140 Grid 
+	#Base 1140 Grid Custom styles       
+    #Tablet (Portrait)
+    #Mobile (Portrait) 
+    #Mobile (Landscape)
+    #Clearing */
+    
+    
+
+/* #Base 1140 Grid 
+================================================== */
+    .container                                  { position: relative; width: 1200px; margin: 0 auto; padding: 0; }
+	.column, .columns                           { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+	.row                                        { margin-bottom: 20px; }
+    
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+    
+    /* Base Grid */
+    .container .one.column                      { width: 80px; }
+	.container .two.columns                     { width: 180px; }
+	.container .three.columns                   { width: 280px; }
+	.container .four.columns                    { width: 380px; }
+	.container .five.columns                    { width: 480px; }
+	.container .six.columns                     { width: 580px; }
+	.container .seven.columns                   { width: 680px; }
+	.container .eight.columns                   { width: 780px; }
+	.container .nine.columns                    { width: 880px; }
+	.container .ten.columns                     { width: 980px; }
+	.container .eleven.columns                  { width: 1080px; }
+	.container .twelve.columns                  { width: 1180px; }
+    
+    /* Offsets */   
+    .container .offset-by-one                   { padding-left: 55px;  }
+	.container .offset-by-two                   { padding-left: 150px; }
+	.container .offset-by-three                 { padding-left: 245px; }
+	.container .offset-by-four                  { padding-left: 340px; }
+	.container .offset-by-five                  { padding-left: 435px; }
+	.container .offset-by-six                   { padding-left: 530px; }
+	.container .offset-by-seven                 { padding-left: 625px; }
+	.container .offset-by-eight                 { padding-left: 720px; }
+	.container .offset-by-nine                  { padding-left: 812px; }
+	.container .offset-by-ten                   { padding-left: 910px; }
+	.container .offset-by-eleven                { padding-left: 1005px; }
+	.container .offset-by-twelve                { padding-left: 1100px; }
+    
+
+/* #Base 1140 Grid Custom styles
+================================================== */
+	
+	.container #sidebar.three.columns { width:220px;}
+	.container #content.nine.columns {width: 940px;}
+	
+	ul.products li.product { width: 180px; padding: 19px; margin: 0 20px 20px 0; }
+	.nine.columns ul.products.list-view li.product {width:775px;}
+	.twelve.columns ul.products.list-view li.product {width:1060px;}
+	.custom-wrapper li {margin:20px 20px 20px 0;padding:19px;}
+	.custom-wrapper li.three { width:180px;}
+	
+	.custom-wrapper li.four { width:240px;}
+	.custom-wrapper li.six { width:340px;}
+	.custom-wrapper li.twelve { width:1140px;}
+	
+	.custom-wrapper.master-sidebar li.nine { width:900px;}
+	.custom-wrapper.master-sidebar li.four { width:260px;}
+	.custom-wrapper.master-sidebar li.three { width:180px;}
+	.custom-wrapper.master-sidebar li.two { width:132px;}
+	
+	.custom-wrapper.filterable { width:1140px}
+	
+	div.product div.summary, #content div.product div.summary {width: 660px;margin-bottom: 30px;}
+	.category-img {width: 205px; margin: 0 40px 40px 0; padding: 19px;}
+	
+	.nine.columns .pagination, .nine.columns .navigation {width:775px;}
+	.twelve.columns .pagination, .twelve.columns .navigation {width:1060px;}
+	#respond input[type=text], #contactForm input[type=text]{ width:795px; margin-right:20px; }
+	#respond textarea, #contactForm textarea {width:795px; height:200px;}
+	
+	.flexslider ul.products li.last { margin-right: 20px !important;}
+	#comments .comments-holder {padding: 20px;	width: 775px;}
+	.boxed-container {width: 1280px;margin: 40px auto;}
+	
+	.ads-wrapper .ads-holder {
+		width:440px;
+		height:305px;
+		position:relative;
+	}
+	.ads-wrapper .ads-holder div {
+		width:220px;
+		height:305px;
+		float:left;
+	}
+	.ads-wrapper li.three {
+		width:220px;
+		overflow:hidden;
+		margin-top:0;
+	}
+ 
+/* #Clearing
+================================================== */
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; } 
+    
+    /* Use clearfix class on parent to clear nested columns, 
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {content: '\0020';display: block;overflow: hidden; visibility: hidden;width: 0;height: 0; }
+    .row:after,.clearfix:after { clear: both; }
+    .row, .clearfix { zoom: 1; }
+      
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {clear: both;display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}  

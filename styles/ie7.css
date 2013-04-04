@@ -1,0 +1,19 @@
+.top-menu-header ul li,
+#navigation ul li,
+#credits .menu-footer li,
+.social-icons-widget li {
+	float:left;
+}
+
+.contact-map { height:450px; display:block;}
+#header { position:relative; z-index:9999;}
+#header .header_mini_cart {z-index:99999}
+.woocommerce_tabs .panel h2 { width:100%;}
+mark.total-items {padding: 0 10px;}
+.cart_list .total strong {padding: 0 10px;}
+
+.flexslider.slideshow .flex-direction-nav a {
+	background:#fff !important;
+	z-index: 99999;
+}
+

@@ -1,0 +1,158 @@
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+	#Base 960 Grid Custom styles    
+    #Tablet (Portrait)
+    #Mobile (Portrait) 
+    #Mobile (Landscape)
+    #Clearing */
+   
+/* #Base 960 Grid 
+================================================== */
+
+    .width-960 .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+	.column, .columns                           { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+	.row                                        { margin-bottom: 20px; }
+    
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+    
+    /* Base Grid */
+    .width-960 .container .one.column                      { width: 60px; }
+	.width-960 .container .two.columns                     { width: 140px; }
+	.width-960 .container .three.columns                   { width: 220px; }
+	.width-960 .container .four.columns                    { width: 300px; }
+	.width-960 .container .five.columns                    { width: 380px; }
+	.width-960 .container .six.columns                     { width: 460px; }
+	.width-960 .container .seven.columns                   { width: 540px; }
+	.width-960 .container .eight.columns                   { width: 620px; }
+	.width-960 .container .nine.columns                    { width: 700px; }
+	.width-960 .container .ten.columns                     { width: 780px; }
+	.width-960 .container .eleven.columns                  { width: 860px; }
+	.width-960 .container .twelve.columns                  { width: 940px; }
+	
+/* #Base 1200 Grid 
+================================================== */
+
+	.width-1140 .container                                  { position: relative; width: 1200px; margin: 0 auto; padding: 0; }
+
+    /* Base Grid */
+    .width-1140 .container .one.column                      { width: 80px; }
+	.width-1140 .container .two.columns                     { width: 180px; }
+	.width-1140 .container .three.columns                   { width: 280px; }
+	.width-1140 .container .four.columns                    { width: 380px; }
+	.width-1140 .container .five.columns                    { width: 480px; }
+	.width-1140 .container .six.columns                     { width: 580px; }
+	.width-1140 .container .seven.columns                   { width: 680px; }
+	.width-1140 .container .eight.columns                   { width: 780px; }
+	.width-1140 .container .nine.columns                    { width: 880px; }
+	.width-1140 .container .ten.columns                     { width: 980px; }
+	.width-1140 .container .eleven.columns                  { width: 1080px; }
+	.width-1140 .container .twelve.columns                  { width: 1180px; }	
+
+    
+/* #Base 960 Grid Custom styles
+================================================== */
+	
+	ul.products li.product { width: 180px; padding: 19px; margin: 0 20px 20px 0; }
+	.nine.columns ul.products.list li.product {width:660px;}
+	.twelve.columns ul.products.list li.product {width:900px;}
+	.custom-wrapper li {margin:10px 20px 10px 0;padding:19px}
+	.custom-wrapper li.first { clear:both;}
+	.custom-wrapper li.three { width:180px;}
+	.custom-wrapper li.four { width:260px;}
+	.custom-wrapper li.six { width:420px;}
+	.custom-wrapper li.twelve { width:900px;}
+	
+	.custom-wrapper.master-sidebar li.nine { width:660px;}
+	.custom-wrapper.master-sidebar li.four { width:300px;}
+	.custom-wrapper.master-sidebar li.three { width:180px;}
+	.custom-wrapper.master-sidebar li.two { width:120px;}
+	
+	.page-headline-wrapper .hr-bullet {max-width:940px;}
+	.custom-wrapper.filterable { width:960px}
+	
+	div.product div.summary, #content div.product div.summary {width: 500px;margin-bottom: 30px; padding-top:15px;}
+	.category-img {width: 180px; margin: 0 20px 20px 0; padding: 19px;}
+	
+	.nine.columns .pagination, .nine.columns .navigation {width:660px;}
+	.twelve.columns .pagination, .twelve.columns .navigation {width:900px;}
+	
+	#respond input[type=text], #contactForm input[type=text]{ width:680px; margin-right:20px; }
+	#respond textarea, #contactForm textarea {width:680px; height:150px;}
+	
+	.flexslider ul.products li.last { margin-right: 20px !important;}
+	
+	#comments .comments-holder {padding: 20px;	width: 660px;}
+    .boxed-container {width: 1020px;margin: 20px auto;}
+	.ads-wrapper .ads-holder {
+		width:440px;
+		height:305px;
+		position:relative;
+	}
+	.ads-wrapper .ads-holder div {
+		width:220px;
+		height:305px;
+		float:left;
+	}
+	.ads-wrapper li.three {
+		width:220px;
+		overflow:hidden;
+		margin-top:0;
+	}
+
+/* #Base 1140 Grid Custom styles
+================================================== */
+	
+	.width-1140 .container #sidebar.three.columns { width:220px;}
+	.width-1140 .container #content.nine.columns {width: 940px;}
+	
+	.width-1140 ul.products li.product { width: 180px; padding: 19px; margin: 0 20px 20px 0; }
+	.width-1140 .nine.columns ul.products.list-view li.product {width:775px;}
+	.width-1140 .twelve.columns ul.products.list-view li.product {width:1060px;}
+	.width-1140 .custom-wrapper li {margin:20px 20px 20px 0;padding:19px;}
+	.width-1140 .custom-wrapper li.three { width:180px;}
+	
+	.width-1140 .custom-wrapper li.four { width:240px;}
+	.width-1140 .custom-wrapper li.six { width:340px;}
+	
+	.width-1140 .custom-wrapper.master-sidebar li.nine { width:900px;}
+	.width-1140 .custom-wrapper.master-sidebar li.four { width:260px;}
+	.width-1140 .custom-wrapper.master-sidebar li.three { width:180px;}
+	.width-1140 .custom-wrapper.master-sidebar li.two { width:132px;}
+	
+	.width-1140 .custom-wrapper.filterable { width:1200px}
+	
+	.width-1140 div.product div.summary, .width-1140 #content div.product div.summary {width: 740px;margin-bottom: 30px;}
+	.width-1140 .category-img {width: 205px; margin: 0 40px 40px 0; padding: 19px;}
+	
+	.width-1140 .nine.columns .pagination, .width-1140 .nine.columns .navigation {width:900px;}
+	.width-1140 .twelve.columns .pagination, .width-1140 .twelve.columns .navigation {width:1060px;}
+	.width-1140 #respond input[type=text], .width-1140 #contactForm input[type=text]{ width:795px; margin-right:20px; }
+	.width-1140 #respond textarea,.width-1140 #contactForm textarea {width:795px; height:200px;}
+	
+	.width-1140 .flexslider ul.products li.last { margin-right: 20px !important;}
+	.width-1140 #comments .comments-holder {padding: 20px;	width: 775px;}
+	.width-1140.boxed-container {width: 1280px;margin: 40px auto;}
+	.width-1140 .ads-wrapper li.three {
+		padding:0;
+		width:220px;
+	}
+
+/* #Clearing
+================================================== */
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; } 
+    
+    /* Use clearfix class on parent to clear nested columns, 
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {content: '\0020';display: block;overflow: hidden; visibility: hidden;width: 0;height: 0; }
+    .row:after,.clearfix:after { clear: both; }
+    .row, .clearfix { zoom: 1; }
+      
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {clear: both;display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}   

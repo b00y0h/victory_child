@@ -1,0 +1,22 @@
+/*
+Theme Name:     Cumico Child Theme
+Theme URI:
+Description:    Cumico Child Theme
+Author:         Disgogo
+Author URI:
+Template:       cumico
+Version:        1
+*/
+
+@import url("../cumico/style.css");
+
+body {
+    background-image: url(/wp-content/themes/victory_child/images/pat09.png);
+    background-position: initial initial;
+    background-repeat: repeat repeat;
+}
+
+
+#footer {
+    font-size: 13px;
+}
