@@ -17,6 +17,10 @@ body {
 }
 
 
-#footer {
+#footer, .widget-container.contact {
     font-size: 13px;
+}
+
+#navigation ul li a:hover{
+    color:#000;
 }
