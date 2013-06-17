@@ -8,19 +8,11 @@ Template:       cumico
 Version:        1
 */
 
-@import url("../cumico/style.css");
-
-body {
-    background-image: url(/wp-content/themes/victory_child/images/pat09.png);
-    background-position: initial initial;
-    background-repeat: repeat repeat;
-}
-
-
-#footer, .widget-container.contact {
-    font-size: 13px;
-}
+/*@import url("../cumico/style.css");*/
 
 #navigation ul li a:hover{
     color:#000;
+}
+#breadcrumb {
+    bottom: 0px;
 }

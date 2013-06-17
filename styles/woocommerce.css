@@ -1,4 +1,4 @@
-input::-webkit-outer-spin-button, 
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {display:none;}
 .woocommerce-result-count {display:none;}
 ul.woocommerce_message,
@@ -9,11 +9,11 @@ ul.woocommerce_info,
 ul.woocommerce-info {
 	margin-left:0;
 }
-.woocommerce_message, 
-.woocommerce_error, 
+.woocommerce_message,
+.woocommerce_error,
 .woocommerce_info,
-.woocommerce-message, 
-.woocommerce-error, 
+.woocommerce-message,
+.woocommerce-error,
 .woocommerce-info {
     padding: 20px;
     margin: 0 0 20px;
@@ -22,20 +22,20 @@ ul.woocommerce-info {
     width: auto;
 	border:1px solid #ededed;
 }
-.woocommerce_message .button, 
-.woocommerce_error .button, 
+.woocommerce_message .button,
+.woocommerce_error .button,
 .woocommerce_info .button,
-.woocommerce-message .button, 
-.woocommerce-error .button, 
+.woocommerce-message .button,
+.woocommerce-error .button,
 .woocommerce-info .button {
     float: right;
 	margin-top:-7px;
 }
-.woocommerce_message li, 
-.woocommerce_error li, 
+.woocommerce_message li,
+.woocommerce_error li,
 .woocommerce_info li,
-.woocommerce-message li, 
-.woocommerce-error li, 
+.woocommerce-message li,
+.woocommerce-error li,
 .woocommerce-info li {
     list-style: none outside;
 }
@@ -113,7 +113,7 @@ div.product div.images div.thumbnails:after, #content div.product div.images div
     display: block;
     clear: both;
 }
-div.product div.images div.thumbnails a, 
+div.product div.images div.thumbnails a,
 #content div.product div.images div.thumbnails a {
     float: left;
     width: 90px;
@@ -121,14 +121,14 @@ div.product div.images div.thumbnails a,
     margin-right: 12px;
 	margin-top: 20px;
 	border:1px solid #ededed;
-	
+
 	-webkit-transition: all ease-in-out .2s;
     -moz-transition: all ease-in-out .2s;
     -o-transition: all ease-in-out .2s;
     transition: all ease-in-out .2s;
 }
 
-div.product div.images div.thumbnails a:hover, 
+div.product div.images div.thumbnails a:hover,
 #content div.product div.images div.thumbnails a:hover {
 	border:1px solid #CEDBE1;
 }
@@ -266,9 +266,9 @@ ul.products li.product {
     position: relative;
     margin-left: 0;
 	border:	1px solid #ededed;
-	
-	transition : border 500ms ease-out; 
-	-webkit-transition : border 500ms ease-out; 
+
+	transition : border 500ms ease-out;
+	-webkit-transition : border 500ms ease-out;
 	-moz-transition : border 500ms ease-out;
 	-o-transition : border 500ms ease-out;
 }
@@ -383,25 +383,25 @@ a.button, button.button, input.button, #respond input#submit, #content input.but
     text-decoration: none;
 	font-family:inherit;
 	line-height:16px;
-	
+
 	-moz-box-shadow: inset 0 3px 0 #eaf0f3;
 	-webkit-box-shadow: inset 0 3px 0 #eaf0f3;
 	box-shadow: inset 0 3px 0 #eaf0f3;
-	
+
     color: #899AA1;
 	text-shadow: 1px 1px 0 #EFF4F6;
 	font-weight:bold;
 	font-size:11px;
-	
+
     border: 1px solid #cedbe1;
     background-color: #dee7eb;
 	text-transform:uppercase;
-	
-	transition : border 500ms ease-out; 
-	-webkit-transition : border 500ms ease-out; 
+
+	transition : border 500ms ease-out;
+	-webkit-transition : border 500ms ease-out;
 	-moz-transition : border 500ms ease-out;
-	-o-transition : border 500ms ease-out; 
-    
+	-o-transition : border 500ms ease-out;
+
 }
 a.button.loading, button.button.loading, input.button.loading, #respond input#submit.loading, #content input.button.loading {
     color: #777;
@@ -428,7 +428,7 @@ a.button.added:before, button.button.added:before, input.button.added:before, #r
 a.button:hover, button.button:hover, input.button:hover, #respond input#submit:hover, #content input.button:hover {
 	border: 1px solid #7794b3;
     text-decoration: none;
-	color: #899AA1 !important;	
+	color: #899AA1 !important;
 }
 .single_add_to_cart_button,
 .single_add_to_cart_button:hover {
@@ -454,15 +454,15 @@ a.button:hover, button.button:hover, input.button:hover, #respond input#submit:h
     overflow: hidden;
     zoom: 1;
 }
-.quantity input.qty, 
+.quantity input.qty,
 #content .quantity input.qty {
     width: 40px;
     height: 32px;
     float: left;
     padding: 0;
     text-align: center;
-	
-	background: url(../images/input-shadow.png) left top repeat-x;	
+
+	/*background: url(../images/input-shadow.png) left top repeat-x;	*/
 	border: 1px solid #d9d9d9;
 	color: #b6b6b6;
 
@@ -1059,7 +1059,7 @@ mark { background:#def3ff;}
     padding: .618em 0;
     display: none;
     border-top: 0;
-}      
+}
 #header .header_mini_cart ul li ul.cart_list li:first-child ul.sub-menu,
 #header .header_mini_cart ul li ul.cart_list li:first-child ul.children {
     background: #edeeef;
@@ -1081,9 +1081,9 @@ mark { background:#def3ff;}
 }
 #header .header_mini_cart ul.mini-cart li {width: auto;}
 #header .header_mini_cart ul.mini-cart li a.cart-parent {
-	background: url(../images/minicart-arrow-icn.png) right center no-repeat,
-				url(../images/input-shadow.png) left top repeat-x;	
-	border: 1px solid #d9d9d9;
+/*	background: url(../images/minicart-arrow-icn.png) right center no-repeat,
+				url(../images/input-shadow.png) left top repeat-x;
+*/	border: 1px solid #d9d9d9;
 	color: #b6b6b6;
 	outline: 0;
 	padding: 8px 50px 9px 55px;
@@ -1209,14 +1209,14 @@ mark { background:#def3ff;}
 }
 #sidebar ul li.widget_shopping_cart p.buttons .button { font-size:11px;}
 #sidebar ul li.widget_shopping_cart p.buttons,
-#sidebar ul li.widget_shopping_cart p.total { 
+#sidebar ul li.widget_shopping_cart p.total {
 	padding:10px 15px;
 	margin:0
 }
 mark.total-items {color:#494949;background:none;font-weight:bold;}
 mark.total-items:after {content:"\2014";padding:0 10px;}
 span.amount {color:#e07b7b;}
-.mini-cart span.amount {font-weight:bold;}	
+.mini-cart span.amount {font-weight:bold;}
 .cart_list .total strong:after{
 	content:"\2014";
 	padding:0 10px;
@@ -1251,7 +1251,7 @@ span.amount {color:#e07b7b;}
 	-webkit-box-shadow: inset 0 0 0 1px #ffffff;
 	-moz-box-shadow: inset 0 0 0 1px #ffffff;
 	-o-box-shadow: inset 0 0 0 1px #ffffff;
-	
+
 	padding: 10px 15px;
 	border: 0;
 	border-top: 1px solid #dddedf;
@@ -1266,9 +1266,9 @@ span.amount {color:#e07b7b;}
 #sidebar ul li.widget_product_categories ul.product-categories li.current-cat li a {
 	color: #5C5C5C;
 }
-#sidebar ul li.widget_product_categories ul.product-categories li ul { 
-	margin:5px 0 0 10px; 
-	list-style:none; 
+#sidebar ul li.widget_product_categories ul.product-categories li ul {
+	margin:5px 0 0 10px;
+	list-style:none;
 	margin-top:10px;
 }
 #sidebar ul li.widget_product_categories ul.product-categories li li {
@@ -1287,7 +1287,7 @@ span.amount {color:#e07b7b;}
     position: absolute;
 	left:0;
 	top:2px;
-    
+
 }
 #sidebar ul li.widget_product_categories ul.product-categories li li a {font-size:12px;}
 #sidebar ul li.widget_product_categories ul.product-categories li .count {color: #98C0D6;font-size:11px;}

@@ -29,6 +29,7 @@ function child_load_styles_and_scripts() {
 
     //Register styles
     wp_register_style('skeleton', get_stylesheet_directory_uri().'/styles/skeleton.css', false, $version, 'screen, projection');
+    wp_register_style('theme-parent', get_template_directory_uri().'/style.css', 'okthemes', $version, 'screen, projection');
     wp_register_style('theme', get_stylesheet_directory_uri().'/style.css', 'okthemes', $version, 'screen, projection');
     wp_register_style('prettyphoto', get_stylesheet_directory_uri().'/styles/prettyPhoto.css', 'okthemes', $version, 'screen, projection');
     wp_register_style('isotope', get_stylesheet_directory_uri().'/styles/isotope.css', 'okthemes', $version, 'screen, projection');
@@ -47,6 +48,7 @@ function child_load_styles_and_scripts() {
 
     //Enqueue styles
     wp_enqueue_style( 'skeleton' );
+    wp_enqueue_style( 'theme-parent' );
     wp_enqueue_style( 'theme' );
     wp_enqueue_style( 'prettyphoto' );
 
@@ -191,3 +193,24 @@ function child_load_styles_and_scripts() {
 
 require_once (PARENT_DIR . '/lib/shortcodes-ultimate/shortcodes-ultimate.php');
 
+
+
+// After Footer
+if (!function_exists('st_after_footer'))  {
+
+    function st_after_footer() {
+            echo "</div>"; //close .container (before credits)
+            echo "</div>"; //close .credits-wrapper-wide
+            echo "</div>"; //close .master-wrapper
+            echo "</div>"; //close .master-wrapper
+            echo "<div style='text-align:center'><a href='http://reversetype.com'>Developed by Reversetype</a></div>";
+
+
+            // Google Analytics
+            if (of_get_option('footer_scripts') <> "" ) {
+                echo '<script type="text/javascript">'.stripslashes(of_get_option('footer_scripts')).'</script>';
+            }
+
+
+    }
+}

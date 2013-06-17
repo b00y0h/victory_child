@@ -2,10 +2,11 @@
 $get_root_path = __FILE__;
 $path_to_wpcontent = explode( 'wp-content', $get_root_path );
 $path_to_wpload = $path_to_wpcontent[0];
-require_once( $path_to_wpload.'/wp-load.php' );
+echo ABSPATH;
+require_once( $path_to_wpload.'../../../wp-load.php' );
 
 // Content type
-header("Content-type: text/css"); 
+header("Content-type: text/css");
 
 // Main Body Styles
 $typography = of_get_option('body_typography');
@@ -22,7 +23,7 @@ if ($typography) {
 
 // Verify if layout = boxed
 $layout_style = of_get_option('layout_style');
-	if ($layout_style == 'boxed') { 	
+	if ($layout_style == 'boxed') {
 	// Custom Background
 	if ($body_background) {
 		if ($body_background['image']) {
@@ -41,7 +42,7 @@ $layout_style = of_get_option('layout_style');
 // End Body Styles
 echo '}';
 
-if ((!$typography['color'] == '#575757'))  { 
+if ((!$typography['color'] == '#575757'))  {
 echo '.testimonials-wrapper li blockquote:before, table td {color:inherit}';
 }
 
@@ -59,7 +60,7 @@ echo '}';
 if ($menu_typography['color'] !== '#3f3f3f')  {
 echo '#header .header_mini_cart ul.mini-cart, #header .header_mini_cart ul li ul.cart_list li a {font-family: inherit;}';
 }
-}		
+}
 
 // Footer typography
 $footer_typography = of_get_option('footer_typography');
@@ -102,7 +103,7 @@ if ($sidebar_custom_widget_heading) {
 		echo 'font-family:'.$sidebar_custom_widget_heading['face'].';';
 		echo 'font-weight:'.$sidebar_custom_widget_heading['style'].';';
 		echo 'font-style:'.$sidebar_custom_widget_heading['style'].';';
-		
+
 		$sidebar_custom_widget_heading_shadow = su_hex_shift( $sidebar_custom_widget_heading['color'], 'lighter', 80 );
 		echo 'text-shadow: 1px 1px 0 '.$sidebar_custom_widget_heading_shadow.';';
 	}
@@ -246,7 +247,7 @@ if ($h1) {
 		echo 'font-style:'.$h1['style'].';';
 	}
 	echo '}';
-	
+
 // H2 Settings
 $h2 = of_get_option('h2_typography');
 
@@ -272,7 +273,7 @@ if ($h3) {
 		echo 'font-style:'.$h3['style'].';';
 	}
 	echo '}';
-	
+
 // H4 Settings
 $h4 = of_get_option('h4_typography');
 
@@ -354,7 +355,7 @@ ul.products.shop-page li.product span.excerpt {display:inline;}
 	background : <?php echo of_get_option('footer_background_color'); ?>
 }
 <?php
-if (of_get_option('footer_background_color') !== '#383838') { 
+if (of_get_option('footer_background_color') !== '#383838') {
 $footer_bottom_border = su_hex_shift( of_get_option('footer_background_color'), 'darker', 30 );
 ?>
 #footer li {
@@ -380,7 +381,7 @@ $footer_bottom_border = su_hex_shift( of_get_option('footer_background_color'), 
 #navigation ul ul li a {
 	background : <?php echo of_get_option('submenu_background_color'); ?>
 }
-<?php 
+<?php
 if (of_get_option('submenu_background_color') !== '#f3f4f5') {
 $submenu_inner_shadow = su_hex_shift( of_get_option('submenu_background_color'), 'lighter', 70 );
 $submenu_border = su_hex_shift( of_get_option('submenu_background_color'), 'darker', 30 );
@@ -416,8 +417,8 @@ $submenu_border = su_hex_shift( of_get_option('submenu_background_color'), 'dark
 .su-divider:before,
 .top-menu-header ul li:before,
 #navigation ul li:after,
-#footer li:before, 
-#sidebar li li:before, 
+#footer li:before,
+#sidebar li li:before,
 .entry-content .widget_recent_entries ul li:before,
 #sidebar ul li.widget_product_categories ul.product-categories li li:before,
 .masonry-navigation li:after,
@@ -439,7 +440,7 @@ ul.digital-downloads li:before {
 
 <?php if (of_get_option('navigation_elements_background')) { ?>
 .flex-direction-nav a,
-#homepage-style-default.with-sidebar .flex-direction-nav .flex-prev, 
+#homepage-style-default.with-sidebar .flex-direction-nav .flex-prev,
 #homepage-style-default.with-sidebar .flex-direction-nav .flex-next {
 	background : <?php echo of_get_option('navigation_elements_background'); ?>
 }
@@ -447,28 +448,28 @@ ul.digital-downloads li:before {
 $navigation_border = su_hex_shift( of_get_option('navigation_elements_background'), 'darker', 40 );
 ?>
 .flex-direction-nav a,
-#homepage-style-default.with-sidebar .flex-direction-nav .flex-prev, 
+#homepage-style-default.with-sidebar .flex-direction-nav .flex-prev,
 #homepage-style-default.with-sidebar .flex-direction-nav .flex-next {
 	border-color: <?php echo $navigation_border; ?>
 }
 <?php } } ?>
 
 <?php if (of_get_option('buttons_background')) { ?>
-a.button, 
-button.button, 
-input.button, 
-#respond input#submit, 
+a.button,
+button.button,
+input.button,
+#respond input#submit,
 #content input.button,
-button, 
-input[type="reset"], 
+button,
+input[type="reset"],
 input[type="submit"],
 input[type="button"],
-.quantity .plus, 
-#content .quantity .plus, 
-.quantity .minus, 
+.quantity .plus,
+#content .quantity .plus,
+.quantity .minus,
 #content .quantity .minus,
-.su-fancy-link, 
-.more-link, 
+.su-fancy-link,
+.more-link,
 a.jms-link,
 #header .header_mini_cart ul.mini-cart li ul.cart_list li.buttons .button,
 #sidebar ul li.widget_shopping_cart p.buttons .button,
@@ -477,26 +478,26 @@ a.jms-link,
 }
 <?php
 
-if (of_get_option('buttons_background') !== '#dee7eb') { 
+if (of_get_option('buttons_background') !== '#dee7eb') {
 $button_box_shadow = su_hex_shift( of_get_option('buttons_background'), 'lighter', 30 );
 $button_border = su_hex_shift( of_get_option('buttons_background'), 'darker', 20 );
 $button_border_hover = su_hex_shift( of_get_option('buttons_background'), 'darker', 60 );
 ?>
 
-a.button, 
-button.button, 
-input.button, 
-#respond input#submit, 
+a.button,
+button.button,
+input.button,
+#respond input#submit,
 #content input.button,
-button, 
-input[type="reset"], 
+button,
+input[type="reset"],
 input[type="submit"],
 input[type="button"],
-.quantity .plus, 
-#content .quantity .plus, 
-.quantity .minus, 
+.quantity .plus,
+#content .quantity .plus,
+.quantity .minus,
 #content .quantity .minus,
-.su-fancy-link, 
+.su-fancy-link,
 .more-link,
 a.jms-link,
 #header .header_mini_cart ul.mini-cart li ul.cart_list li.buttons .button,
@@ -505,7 +506,7 @@ a.jms-link,
 	-webkit-box-shadow: inset 0 3px 0 <?php echo $button_box_shadow; ?>;
 	box-shadow: inset 0 3px 0 <?php echo $button_box_shadow; ?>;
     border-color: <?php echo $button_border; ?>;
-    
+
     color: <?php echo $button_box_shadow; ?>;
     text-shadow: 1px 1px 0 <?php echo $button_border; ?>;
 }
@@ -514,20 +515,20 @@ a.jms-link,
 	border-color: <?php echo $button_border; ?>;
 }
 
-a.button:hover, 
-button.button:hover, 
-input.button:hover, 
-#respond input#submit:hover, 
+a.button:hover,
+button.button:hover,
+input.button:hover,
+#respond input#submit:hover,
 #content input.button:hover,
-button:hover, 
-input[type="reset"]:hover, 
+button:hover,
+input[type="reset"]:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
-.quantity .plus:hover, 
-#content .quantity .plus:hover, 
-.quantity .minus:hover, 
+.quantity .plus:hover,
+#content .quantity .plus:hover,
+.quantity .minus:hover,
 #content .quantity .minus:hover,
-.su-fancy-link:hover, 
+.su-fancy-link:hover,
 .more-link:hover,
 a.jms-link:hover,
 #header .header_mini_cart ul.mini-cart li ul.cart_list li.buttons .button,
@@ -559,7 +560,7 @@ a.jms-link:hover,
 	background-color : <?php echo of_get_option('header_minicart_list_background'); ?>
 }
 <?php
-if (of_get_option('header_minicart_list_background') !== '#f3f4f5') { 
+if (of_get_option('header_minicart_list_background') !== '#f3f4f5') {
 $minicart_inner_shadow = su_hex_shift( of_get_option('header_minicart_list_background'), 'lighter', 70 );
 $minicart_border = su_hex_shift( of_get_option('header_minicart_list_background'), 'darker', 30 );
 ?>
@@ -582,13 +583,13 @@ ul.cart_list li img, ul.product_list_widget li img {
 <?php } ?>
 <?php } ?>
 
-<?php 
-if (of_get_option('general_border_color')) { 
-if (of_get_option('general_border_color') !== '#ededed') { 
+<?php
+if (of_get_option('general_border_color')) {
+if (of_get_option('general_border_color') !== '#ededed') {
 ?>
 .custom-wrapper li,
 ul.products li.product,
-div.product div.images, 
+div.product div.images,
 #content div.product div.images,
 .custom-wrapper .entry-lightbox a,
 .pagination, .navigation,
@@ -601,9 +602,9 @@ span.onsale,
 .grid-switch a {color:<?php echo of_get_option('general_border_color'); ?>;}
 <?php }} ?>
 
-<?php 
-if (of_get_option('general_hover_border_color')) { 
-if (of_get_option('general_hover_border_color') !== '#cedbe1') { 
+<?php
+if (of_get_option('general_hover_border_color')) {
+if (of_get_option('general_hover_border_color') !== '#cedbe1') {
 ?>
 .custom-wrapper li:hover,
 ul.products li.product:hover,
@@ -617,13 +618,13 @@ div.pagination:hover,
 }
 <?php }} ?>
 
-<?php 
+<?php
 if (of_get_option('sidebar_background_color')) {
 if (of_get_option('sidebar_background_color') !== '#e0e8ed') {
-$sidebar_count = su_hex_shift( of_get_option('sidebar_background_color'), 'darker', 30 );	
-$filter_light = su_hex_shift( of_get_option('sidebar_background_color'), 'lighter', 50 );	
+$sidebar_count = su_hex_shift( of_get_option('sidebar_background_color'), 'darker', 30 );
+$filter_light = su_hex_shift( of_get_option('sidebar_background_color'), 'lighter', 50 );
 ?>
-#sidebar ul li.widget_product_categories, 
+#sidebar ul li.widget_product_categories,
 #sidebar ul li.widget_shopping_cart,
 ul.portfolio-meta,
 .widget_price_filter .ui-slider .ui-slider-range {
@@ -650,11 +651,11 @@ ul.portfolio-meta li.project-url,
 	background-color: <?php echo of_get_option('sidebar_list_background_color'); ?>;
 }
 <?php
-if (of_get_option('sidebar_list_background_color') !== '#f3f4f5') { 
+if (of_get_option('sidebar_list_background_color') !== '#f3f4f5') {
 $sidebar_list_inner_shadow = su_hex_shift( of_get_option('sidebar_list_background_color'), 'lighter', 70 );
 $sidebar_list_border = su_hex_shift( of_get_option('sidebar_list_background_color'), 'darker', 30 );
 ?>
-#sidebar ul li.widget_product_categories ul.product-categories li, 
+#sidebar ul li.widget_product_categories ul.product-categories li,
 #sidebar ul li.widget_shopping_cart ul.cart_list li,
 ul.portfolio-meta li,
 ul.portfolio-meta li.project-date,
@@ -669,7 +670,7 @@ ul.portfolio-meta li.project-url,
     border-top: 1px solid <?php echo $sidebar_list_border; ?>;
 }
 
-#sidebar ul li.widget_product_categories, 
+#sidebar ul li.widget_product_categories,
 #sidebar ul li.widget_shopping_cart,
 ul.portfolio-meta,
 #questions,
@@ -681,24 +682,24 @@ ul.portfolio-meta {border-top:0;}
 <?php } ?>
 
 <?php if (of_get_option('form_elements_border_color')) { ?>
-textarea, 
-select, 
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"], 
-input[type="email"], 
-input[type="month"], 
-input[type="number"], 
-input[type="password"], 
-input[type="search"], 
-input[type="tel"], 
-input[type="text"], 
-input[type="input"], 
-input[type="time"], 
-input[type="url"], 
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="input"],
+input[type="time"],
+input[type="url"],
 input[type="week"],
 #header .header_mini_cart ul.mini-cart li a.cart-parent,
-.quantity input.qty, 
+.quantity input.qty,
 #content .quantity input.qty {
     border-color: <?php echo of_get_option('form_elements_border_color'); ?>;
 }
